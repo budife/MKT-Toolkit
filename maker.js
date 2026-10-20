@@ -10,18 +10,18 @@
     {href:'tools/converttext.html',icon:'Aa',title:'Convert Text',desc:'Convert text case: uppercase, lowercase, title case, sentence case, and more.'},
     {href:'tools/screenshot.html',icon:'📷',title:'Website Screenshot',desc:'Capture screenshots of any website and download as PNG, JPG, or PDF.'},
     {href:'tools/assembler.html',icon:'✉',title:'Template Assembler',desc:'Combine header, layout, and footer templates into a complete email HTML.'},
-    {href:'tools/presentation-board.html',icon:'▤',title:'Presentation Board',desc:'Arrange visuals into a clean board for review, presentation, or delivery.',isNew:true},
-    {href:'tools/pdf-tools.html',icon:'▤',title:'PDF Tools',desc:'Merge and optimize PDF files without rasterizing their pages.',isNew:true},
-    {href:'tools/typography-helper.html',icon:'Tt',title:'Typography Helper',desc:'Build a practical type scale, preview hierarchy, and copy CSS.',isNew:true},
-    {href:'tools/social-canvas.html',icon:'▣',title:'Social Size Guide',desc:'Find social and messaging sizes before you design.',isNew:true},
-    {href:'tools/image-studio.html',icon:'◧',title:'Image Studio',desc:'Resize, convert, compress, and rename images locally.',isNew:true},
-    {href:'tools/color-studio.html',icon:'◉',title:'Color Studio',desc:'Explore color values, build palettes, and generate shades and tints.',isNew:true},
-    {href:'tools/design-qa.html',icon:'✓',title:'Design QA',desc:'Check dimensions, ratios, formats, file sizes, and filenames before delivery.',isNew:true},
-    {href:'tools/screenshot-reference-board.html',icon:'▤',title:'Reference Board',desc:'Collect screenshots, add source notes, and build a visual reference board.',isNew:true}
+    {href:'tools/presentation-board.html',icon:'▤',title:'Presentation Board',desc:'Arrange visuals into a clean board for review, presentation, or delivery.'},
+    {href:'tools/pdf-tools.html',icon:'▤',title:'PDF Tools',desc:'Merge and optimize PDF files without rasterizing their pages.'},
+    {href:'tools/typography-helper.html',icon:'Tt',title:'Typography Helper',desc:'Build a practical type scale, preview hierarchy, and copy CSS.'},
+    {href:'tools/social-canvas.html',icon:'▣',title:'Social Size Guide',desc:'Find social and messaging sizes before you design.'},
+    {href:'tools/image-studio.html',icon:'◧',title:'Image Studio',desc:'Resize, convert, compress, and rename images locally.'},
+    {href:'tools/color-studio.html',icon:'◉',title:'Color Studio',desc:'Explore color values, build palettes, and generate shades and tints.'},
+    {href:'tools/design-qa.html',icon:'✓',title:'Design QA',desc:'Check dimensions, ratios, formats, file sizes, and filenames before delivery.'},
+    {href:'tools/screenshot-reference-board.html',icon:'▤',title:'Reference Board',desc:'Collect screenshots, add source notes, and build a visual reference board.'}
   ];
 
   grid.innerHTML=CARDS.map(function(card){
-    return '<a class="tool-card'+(card.isNew?' tool-card-new':'')+'" href="'+card.href+'">'
+    return '<a class="tool-card" href="'+card.href+'">'
       +'<div class="tool-icon">'+card.icon+'</div>'
       +'<h3>'+card.title+'</h3>'
       +'<p>'+card.desc+'</p>'

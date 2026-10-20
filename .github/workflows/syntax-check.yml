@@ -1,0 +1,19 @@
+name: Syntax check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: node --check (project JavaScript)
+        run: |
+          find maker.js tools -name '*.js' -not -path 'tools/gas/*' -print0 | xargs -0 -n1 node --check
+      - name: node --check (Apps Script Code.gs as plain ES5/ES2015)
+        run: cp tools/gas/Code.gs /tmp/Code.js && node --check /tmp/Code.js
