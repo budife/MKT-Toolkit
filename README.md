@@ -26,7 +26,7 @@ Open `index.html` directly in Chrome or Edge, or use VS Code Live Server on port
 
 ## Project Notes
 
-- Vendor libraries are bundled in `libs/` for offline-first operation.
+- Vendor libraries are bundled in `libs/` for offline-first operation. Known versions: html2canvas `1.4.1`, SheetJS xlsx `0.18.5`, qrcode-generator (Kazuhiko Arase, header carries no version). `html-to-image.min.js` and `pdf-lib.min.js` are minified builds with the version header stripped — verify against upstream before replacing.
 - Daily Currency exports must remain `1920x1080` horizontal or `1080x1920` vertical.
 - The Screenshot tool still needs an external fetcher to bypass remote-site CORS restrictions.
 - Maker profile and recent changes live in `maker-data.js` and render on `the-maker.html`.

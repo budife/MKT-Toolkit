@@ -65,7 +65,7 @@ epsilon/
 | Typography Helper | `tools/typography-helper.html` | Type scale, preview hierarchy, konversi unit, copy CSS |
 | Screenshot Reference Board | `tools/screenshot-reference-board.html` | Kumpulkan screenshot + catatan sumber jadi reference board |
 
-Home grid ada di `index.html:1` (5 kartu hardcoded) — kartu lain di-inject dan diurutkan oleh `maker.js`. Tiap tambah tool wajib tambah kartu di `maker.js` (`cardOrder` + markup inject), baris di tabel §4, dan baris di `README.md`.
+Home grid ada di `index.html` sebagai `.tool-grid` kosong — **semua 13 kartu dibangun oleh `maker.js` dari array `CARDS`** (satu sumber data, diurutkan A-Z). Tiap tambah tool wajib tambah entri di `CARDS`, baris di tabel §4, dan baris di `README.md`.
 
 ## 5. Konvensi Code
 
@@ -86,7 +86,7 @@ start index.html
 ```
 
 Tidak ada unit test / build. Verifikasi manual:
-1. Buka `index.html` → cek 13 card muncul (5 hardcoded + 8 inject `maker.js`).
+1. Buka `index.html` → cek 13 card muncul (semua dari `CARDS` di `maker.js`).
 2. Buka tiap `tools/*.html` → cek upload/preview/download jalan + link `budd` di header ada.
 3. Klik `budd` → buka `the-maker.html` → tab Profile/Updates switch.
 
