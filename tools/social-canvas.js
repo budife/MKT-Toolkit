@@ -25,7 +25,7 @@ var sizes=[
 {platform:'X / Twitter',format:'Post Landscape',usage:'Feed',width:1600,height:900,aliases:['twitter','landscape','post']},
 {platform:'X / Twitter',format:'Header Banner',usage:'Banner',width:1500,height:500,aliases:['twitter','banner','profile']}
 ];
-var activePlatform='all',favorites=JSON.parse(localStorage.getItem('epsilon-size-favorites')||'[]'),favoritesOnly=false;
+var activePlatform='all',favorites=[],favoritesOnly=false;try{var rawFav=JSON.parse(localStorage.getItem('epsilon-size-favorites')||'[]');if(Array.isArray(rawFav))favorites=rawFav;}catch(e){/*corrupt value -> start clean*/}
 var platformOrder=['all','Instagram','WhatsApp','TikTok','LinkedIn','YouTube','Facebook','X / Twitter'];
 function ratio(w,h){var a=w,b=h;while(b){var t=a%b;a=b;b=t;}return(w/a)+':'+(h/a);}
 function copy(value){if(navigator.clipboard)navigator.clipboard.writeText(value);}
