@@ -66,7 +66,7 @@ body{
 .as-drop-zone small{color:var(--muted);font-size:11px;margin:6px 20px 10px}
 .as-drop-zone .choose-button{padding:6px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:11px;font-weight:700}
 
-.as-file-name{padding:0 16px 16px;color:var(--muted);font-size:11px}
+.as-file-name{padding:0 16px 16px;color:var(--muted);font-size:11px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.4;max-height:2.8em;word-break:break-all}
 
 .options-card{
   border:1px solid var(--line);
