@@ -10,7 +10,7 @@ MkT Toolkit adalah **Excel Report Studio & Toolkit** — kumpulan utilitas kecil
 - Semua logic jalan client-side. Lib di-bundle offline di `libs/`.
 - Live Server (VS Code) pakai port `5501` — lihat `.vscode/settings.json:1`.
 
-Branding: MkT Toolkit, warna utama `--red: #db0011`, `--ink: #17212b`, font `Univers 45 Light` fallback `Arial`. Logo di `assets/epsilon-logo.png`.
+Branding: MkT Toolkit, warna utama `--red: #db0011`, `--ink: #17212b`, font `Univers 45 Light` fallback `Arial`. Logo di `assets/mkt-logo.png`.
 
 ## 2. Struktur Proyek
 
@@ -22,7 +22,7 @@ mkt-toolkit/
 ├── maker-data.js        # Shared maker profile and recent changes data
 ├── the-maker.html       # Maker profile and changelog page
 ├── the-maker.css        # Maker page styles
-├── assets/             # epsilon-logo.png dkk
+├── assets/             # mkt-logo.png dkk
 ├── libs/               # Vendor offline (jangan hapus)
 │   ├── xlsx.full.min.js       # Daily Currency
 │   ├── qrcode-generator.js    # QR Code

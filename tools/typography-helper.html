@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Typography Helper — MkT Toolkit</title>
-  <link rel="icon" type="image/png" href="../assets/epsilon-logo.png">
+  <link rel="icon" type="image/png" href="../assets/mkt-logo.png">
   <link rel="stylesheet" href="typography-helper.css">
   <link rel="stylesheet" href="footer.css">
+<meta name="description" content="MkT Toolkit — small, focused browser utilities for reporting, communication, and everyday workflow.">
+<meta property="og:title" content="Typography Helper — MkT Toolkit">
+<meta property="og:description" content="MkT Toolkit — small, focused browser utilities for reporting, communication, and everyday workflow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://budife.github.io/mkt-toolkit/tools/typography-helper.html">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="../manifest.json">
 </head>
 <body>
   <main class="type-app">
@@ -23,5 +30,8 @@
   </main>
   <script src="typography-helper.js"></script>
   <script src="../maker.js"></script>
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("../sw.js").catch(function(){});});}
+</script>
 </body>
 </html>
