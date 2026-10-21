@@ -70,7 +70,7 @@ async function combine(){
 
   var headerKey=$('#header-select').value;
   var footerKey=$('#footer-select').value;
-  var width=Number($('#width-select').value);
+  var widthMode=$('#width-select').value;
 
   status('Loading images...');
   $('#download-btn').disabled=true;
@@ -86,6 +86,10 @@ async function combine(){
     status('Failed to load layout image.');
     return;
   }
+
+  var width=widthMode==='auto'
+    ?Math.max(headerImg?headerImg.naturalWidth:0, layoutImg.naturalWidth, footerImg?footerImg.naturalWidth:0)
+    :Number(widthMode);
 
   finalCanvas=buildImage(headerImg,layoutImg,footerImg,width);
 
