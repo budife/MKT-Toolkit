@@ -41,5 +41,16 @@
 if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("../sw.js").catch(function(){});});}
 </script>
 <script src="../theme.js"></script>
+<script data-drag-drop-helper>
+(function(){
+  var input=document.getElementById("qa-input");
+  var zone=document.querySelector(".qa-drop");
+  if(!input||!zone)return;
+  function handle(files){ try{input.files=files;}catch(e){} input.dispatchEvent(new Event("change"));} 
+  ["dragenter","dragover"].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();zone.classList.add("dragging");});});
+  ["dragleave","drop"].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();zone.classList.remove("dragging");});});
+  zone.addEventListener("drop",function(e){e.preventDefault();zone.classList.remove("dragging");if(e.dataTransfer&&e.dataTransfer.files.length)handle(e.dataTransfer.files);});
+})();
+</script>
 </body>
 </html>
