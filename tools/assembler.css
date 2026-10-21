@@ -106,7 +106,8 @@ body{
 .field-inline{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted)}
 .format-select{height:38px;border:1px solid var(--line);background:var(--surface);padding:0 12px;font:inherit;font-size:14px;outline:none}
 
-.as-btn{height:46px;padding:0 28px;border:0;font-size:13px;font-weight:700;cursor:pointer}
+.as-btn{height:46px;padding:0 28px;border:0;font-size:13px;font-weight:700;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1),background 160ms ease-out,border-color 160ms ease-out;color:#fff}
+.as-btn:active{transform:scale(0.97)}
 .as-btn.primary{background:var(--red);color:#fff}
 .as-btn.primary:hover{background:#c50010}
 .as-btn.secondary{border:1px solid var(--line);background:var(--surface);color:#263442}
@@ -122,6 +123,8 @@ body{
 .preview-frame-wrap{background:#e8e8e8;padding:16px;flex:1;display:flex;min-height:0}
 .preview-frame{width:100%;height:100%;border:0;background:var(--surface);display:block}
 
+@media(prefers-reduced-motion:reduce){.as-btn{transition:none;transform:none}}
+@media(hover:hover) and (pointer:fine){.as-btn{transform:scale(1)}}
 @media(max-width:900px){
   .as-layout{overflow:auto}
   .as-columns{flex-direction:column}
