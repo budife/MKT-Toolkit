@@ -7,7 +7,8 @@ var TEMPLATES={
   'header':{src:'../assets/header.jpg'},
   'header-premier':{src:'../assets/header-premier.jpg'},
   'footer':{src:'../assets/footer.jpg'},
-  'footer-mobile':{src:'../assets/footer-with-mobile.jpg'}
+  'footer-mobile':{src:'../assets/footer-with-mobile.jpg'},
+  'footer-hsbc':{src:'../assets/footer-hsbc-2026.jpg'}
 };
 
 var imageCache={};
