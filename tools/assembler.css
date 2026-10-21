@@ -101,8 +101,8 @@ body{
   outline:none;
 }
 
-.as-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.as-actions-right{display:flex;align-items:center;gap:8px}
+.as-actions{display:grid;grid-auto-flow:column;grid-auto-columns:max-content;gap:12px;align-items:center;justify-content:space-between}
+.as-actions-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .field-inline{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted)}
 .format-select{height:38px;border:1px solid var(--line);background:var(--surface);padding:0 12px;font:inherit;font-size:14px;outline:none}
 

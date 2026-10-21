@@ -96,7 +96,7 @@ async function combine(){
   $('#preview-frame').srcdoc='<!doctype html><html><body style="margin:0;display:flex;justify-content:center;background:#e8e8e8;">'
     +'<img src="'+finalCanvas.toDataURL('image/png')+'" style="max-width:100%;"></body></html>';
 
-  status('Combined! Click Download Image to save.');
+  status('Combined! Layout preview is ready — click Download Image to save.');
   $('#download-btn').disabled=false;
 }
 
@@ -132,7 +132,8 @@ function readFile(file){
     layoutDataUrl=reader.result;
     layoutFileName=file.name;
     $('#file-name').textContent=file.name;
-    status('Layout loaded: '+file.name+' — click Combine & Preview.');
+    status('Layout loaded: '+file.name+' — combining…');
+    combine();
   };
   reader.readAsDataURL(file);
 }
@@ -183,7 +184,6 @@ function init(){
     if(e.dataTransfer.files[0])readFile(e.dataTransfer.files[0]);
   });
 
-  $('#combine-btn').addEventListener('click',combine);
   $('#download-btn').addEventListener('click',download);
   $('#download-header-btn').addEventListener('click',function(){downloadTemplate('header')});
   $('#download-footer-btn').addEventListener('click',function(){downloadTemplate('footer')});
