@@ -1,5 +1,5 @@
 /**
- * Epsilon Website Screenshot — Google Apps Script HTML Fetcher
+ * MkT Toolkit Website Screenshot — Google Apps Script HTML Fetcher
  * Mirror dari eDM Helper js/pages-layout-checker.js:14 + doGet
  *
  * Deploy: Extensions > Apps Script > paste Code.gs > Deploy > New deployment

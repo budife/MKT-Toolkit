@@ -2,6 +2,10 @@
 
 All notable user-visible changes are recorded here. The newest entry must match the first item in `maker-data.js` under `changes`.
 
+## v2.1.15 — 21 Oct 2026
+
+- Renamed the toolkit from Epsilon to MkT Toolkit across the UI, docs, and repository; the GitHub repo is now `budife/mkt-toolkit`.
+
 ## v2.1.14 — 29 Sep 2026
 
 - QR vCard: a new "Apply to fields" button (or Ctrl+Enter) fills the contact fields from what you paste. Real vCards get sturdier parsing — Outlook quoted-printable names, correct address slots (street/city/state/zip/country), any line ending, first contact of a multi-contact bundle — and rough plain-text cards (name, job, company, address with ZIP split into its own field, phone/email/website lines) are detected line by line too. Website links are normalized to `https://www.…` (an explicit `http://` is kept), and a clear notice tells you when nothing can be detected.
@@ -61,7 +65,7 @@ All notable user-visible changes are recorded here. The newest entry must match 
 
 ## v2.1.0 — 13 Sep 2026
 
-- Unified all Epsilon tools into one home grid without category tabs.
+- Unified all MkT Toolkit tools into one home grid without category tabs.
 - Added workflow labels and stronger hover states to make cards easier to scan and discover.
 
 ## v2.0.0 — 13 Sep 2026
@@ -265,4 +269,4 @@ All notable user-visible changes are recorded here. The newest entry must match 
 
 ## v1.0.0 — 14 Aug 2026
 
-- Initial Epsilon toolkit release with FX rate reporting from Counter Rate workbooks.
+- Initial MkT Toolkit toolkit release with FX rate reporting from Counter Rate workbooks.

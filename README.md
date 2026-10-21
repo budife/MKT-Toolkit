@@ -1,6 +1,6 @@
-# Epsilon Toolkit
+# MkT Toolkit Toolkit
 
-Epsilon is a browser-based collection of small utilities for reporting, communication, and everyday workflow. It uses vanilla HTML, CSS, and JavaScript with no build step, server, or npm installation.
+MkT Toolkit is a browser-based collection of small utilities for reporting, communication, and everyday workflow. It uses vanilla HTML, CSS, and JavaScript with no build step, server, or npm installation.
 
 ## Run
 

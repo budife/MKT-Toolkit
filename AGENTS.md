@@ -1,21 +1,21 @@
-# AGENTS.md — Epsilon Toolkit
+# AGENTS.md — MkT Toolkit Toolkit
 
 > Panduan untuk AI agent / contributor yang bekerja di repo ini.
 
 ## 1. Project Overview
 
-Epsilon adalah **Excel Report Studio & Toolkit** — kumpulan utilitas kecil berbasis browser tanpa build step, tanpa server, dan tanpa instalasi npm.
+MkT Toolkit adalah **Excel Report Studio & Toolkit** — kumpulan utilitas kecil berbasis browser tanpa build step, tanpa server, dan tanpa instalasi npm.
 
 - Buka `index.html` langsung di browser desktop modern.
 - Semua logic jalan client-side. Lib di-bundle offline di `libs/`.
 - Live Server (VS Code) pakai port `5501` — lihat `.vscode/settings.json:1`.
 
-Branding: Epsilon, warna utama `--red: #db0011`, `--ink: #17212b`, font `Univers 45 Light` fallback `Arial`. Logo di `assets/epsilon-logo.png`.
+Branding: MkT Toolkit, warna utama `--red: #db0011`, `--ink: #17212b`, font `Univers 45 Light` fallback `Arial`. Logo di `assets/epsilon-logo.png`.
 
 ## 2. Struktur Proyek
 
 ```
-epsilon/
+mkt-toolkit/
 ├── index.html          # Home — unified tool grid (13 kartu)
 ├── home.css            # Style home
 ├── maker.js            # Home grid builder (inject + urutkan kartu tool)

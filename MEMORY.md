@@ -1,8 +1,8 @@
-# Epsilon Memory
+# MkT Toolkit Memory
 
 ## Product
 
-- Epsilon is a small, practical, fast, and tidy browser toolkit made by budd.
+- MkT Toolkit is a small, practical, fast, and tidy browser toolkit made by budd.
 - The project is intentionally vanilla and has no npm, build step, framework, or server requirement.
 - UI language can mix English and Indonesian; code comments should be in English.
 

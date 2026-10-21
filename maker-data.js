@@ -4,13 +4,14 @@
   window.EpsilonMakerData={
     name:'budd',
     fullName:'Budi Indra Ilham',
-    role:'Developer & Maker of Epsilon',
+    role:'Developer & Maker of MkT Toolkit',
     tagline:'Developer yang suka ngoding sambil ngopi.',
-    bio:'Mantan gajian yang jago ngolah angka di Excel, sekarang bikin Epsilon — kumpulan tool kecil buat urusan harian: report kurs, QR code, screenshot website, sampai assemble template email. Suka bikin hal yang praktis, cepat, dan rapi.',
+    bio:'Mantan gajian yang jago ngolah angka di Excel, sekarang bikin MkT Toolkit — kumpulan tool kecil buat urusan harian: report kurs, QR code, screenshot website, sampai assemble template email. Suka bikin hal yang praktis, cepat, dan rapi.',
     github:'https://github.com/budife',
     instagram:'https://instagram.com/budife.psd/',
     linkedin:'https://linkedin.com/in/budifelt/',
     changes:[
+      {version:'v2.1.15',date:'21 Oct 2026',title:'Rename to MkT Toolkit',description:'Nama toolkit diubah dari Epsilon menjadi MkT Toolkit di seluruh UI, dokumentasi, dan repositori; repo GitHub sekarang budife/mkt-toolkit.'},
       {version:'v2.1.14',date:'29 Sep 2026',title:'Tombol Apply untuk paste vCard & teks kasar',description:'Tab vCard kini punya tombol "Apply to fields" (atau Ctrl+Enter) untuk mengisi kolom kontak dari apapun yang dipaste: vCard asli diparsing lebih (nama Outlook quoted-printable, slot alamat yang dulu meleset, semua line ending, kontak pertama untuk bundle), dan teks kasar tanpa BEGIN:VCARD (nama, jabatan, PT, alamat dengan ZIP dipisah sendiri, nomor Telp/email) ikut terdeteksi per baris, dan website otomatis dinormalisasi menjadi https://www.… (http:// eksplisit dipertahankan). Notice jelas kalau tidak ada info kontak yang bisa dibaca.'},
       {version:'v2.1.13',date:'29 Sep 2026',title:'Compress PDFs in Image Studio',description:'Image Studio kini bisa kompres PDF: cukup drop PDF, foto/scan di dalamnya di-encode ulang sesuai Quality atau batas KB/MB, sementara teks dan vektor tetap tajam. Tiap PDF punya kartu hasil sendiri dengan ukuran asli vs terkompresi, jumlah halaman, dan catatan bila tidak ada gambar yang bisa dikompres.'},
       {version:'v2.1.12',date:'29 Sep 2026',title:'Image Studio size report & target limit',description:'Hasil Image Studio kini menampilkan ukuran asli vs terkompresi dengan persentase pengurangan (byte asli, bukan estimasi), plus opsi baru "Max file size" yang menurunkan quality JPG/WebP otomatis sampai muat batas KB/MB.'},
@@ -72,8 +73,8 @@
       {version:'v1.0.4',date:'19 Aug 2026',title:'Website Screenshot upgrade',description:'Tombol Download di samping Capture, nama file otomatis sesuai link, layout 2 kolom, dan perbaikan crop email blast HSBC.'},
       {version:'v1.0.3',date:'19 Aug 2026',title:'Template Assembler baru',description:'Gabung header, layout image, dan footer jadi satu gambar utuh dengan preview dan download PNG/JPG.'},
       {version:'v1.0.2',date:'19 Aug 2026',title:'Renaming & tidy up',description:'EGA menjadi FX Rate Daily Currency Report, footer semua page pindah ke header meet the maker, dan code dirapikan.'},
-      {version:'v1.0.1',date:'18 Aug 2026',title:'QR & tools setup',description:'QR Code Generator, Website Screenshot, dan Convert Text resmi masuk ke Epsilon Toolkit.'},
-      {version:'v1.0.0',date:'14 Aug 2026',title:'Epsilon lahir',description:'Toolkit pertama untuk report kurs dari Excel counter rate, di-host di GitHub Pages.'}
+      {version:'v1.0.1',date:'18 Aug 2026',title:'QR & tools setup',description:'QR Code Generator, Website Screenshot, dan Convert Text resmi masuk ke MkT Toolkit Toolkit.'},
+      {version:'v1.0.0',date:'14 Aug 2026',title:'MkT Toolkit lahir',description:'Toolkit pertama untuk report kurs dari Excel counter rate, di-host di GitHub Pages.'}
     ]
   };
 }());
