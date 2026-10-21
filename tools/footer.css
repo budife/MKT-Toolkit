@@ -1,3 +1,4 @@
+:root{--bg:#f3f6f8;--surface:#fff;--ink:#17212b;--muted:#71808c;--line:#dce3e8;--red:#db0011}
 .head-footer{display:flex;align-items:center;gap:16px}
 .head-footer p{margin:0;color:#8a959d;font-size:11px}
 .head-footer .creator-link{position:relative;cursor:pointer;color:#6d7984;font-weight:600;text-decoration:none}
@@ -13,3 +14,5 @@
 .sidebar-footer .creator-tooltip::after{bottom:auto;top:100%;right:auto;left:14px;border-bottom-color:transparent;border-top-color:#17212b}
 
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #db0011;outline-offset:2px}
+
+:root[data-theme="dark"]{--bg:#0f1419;--surface:#161c24;--ink:#e6edf3;--muted:#9aa8b5;--line:#2a3440;--red:#ff4d5a}

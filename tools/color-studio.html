@@ -14,6 +14,7 @@
 <meta property="og:url" content="https://budife.github.io/mkt-toolkit/tools/color-studio.html">
 <meta name="twitter:card" content="summary">
 <link rel="manifest" href="../manifest.json">
+<link rel="stylesheet" href="../theme.css">
 </head>
 <body>
   <main class="color-app">
@@ -31,11 +32,12 @@
       </section>
     </div>
   </main>
-  <script src="../libs/html-to-image.min.js"></script>
+  <script src="../libs/html-to-image.min.js" defer></script>
   <script src="color-studio.js"></script>
   <script src="../maker.js"></script>
 <script>
 if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("../sw.js").catch(function(){});});}
 </script>
+<script src="../theme.js"></script>
 </body>
 </html>
