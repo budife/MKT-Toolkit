@@ -137,6 +137,28 @@ function readFile(file){
   reader.readAsDataURL(file);
 }
 
+async function downloadTemplate(kind){
+  var key=$('#'+kind+'-select').value;
+  if(key==='none'){
+    status('Select a '+kind+' template first.');
+    return;
+  }
+  var img=await loadTemplate(key);
+  if(!img){status('Failed to load '+kind+' template.');return;}
+  var canvas=document.createElement('canvas');
+  canvas.width=img.naturalWidth;
+  canvas.height=img.naturalHeight;
+  canvas.getContext('2d').drawImage(img,0,0);
+  canvas.toBlob(function(blob){
+    var link=document.createElement('a');
+    link.download=key.replace(/[^a-z0-9_-]/gi,'_')+'.'+$('#format-select').value;
+    link.href=URL.createObjectURL(blob);
+    link.click();
+    setTimeout(function(){URL.revokeObjectURL(link.href)},1000);
+    status(kind.charAt(0).toUpperCase()+kind.slice(1)+' downloaded!');
+  },$('#format-select').value==='jpg'?'image/jpeg':'image/png',0.95);
+}
+
 function init(){
   var fileInput=$('#file-input');
   var zone=$('#drop-zone');
@@ -163,6 +185,8 @@ function init(){
 
   $('#combine-btn').addEventListener('click',combine);
   $('#download-btn').addEventListener('click',download);
+  $('#download-header-btn').addEventListener('click',function(){downloadTemplate('header')});
+  $('#download-footer-btn').addEventListener('click',function(){downloadTemplate('footer')});
 }
 
 init();
