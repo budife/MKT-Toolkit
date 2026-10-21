@@ -1,0 +1,17 @@
+/* Shared focus ring — consistent across all tools */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--red, #db0011);
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--red, #db0011);
+}
