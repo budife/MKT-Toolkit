@@ -35,7 +35,7 @@
           <div class="maker-links"><a id="maker-github" href="https://github.com/budife" target="_blank" rel="noopener">GitHub ↗</a><a id="maker-instagram" href="https://instagram.com/budife.psd/" target="_blank" rel="noopener">Instagram ↗</a><a id="maker-linkedin" href="https://linkedin.com/in/budifelt/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
         </aside>
         <section class="maker-changes" aria-labelledby="changes-title">
-          <div class="maker-changes-head"><h2 id="changes-title">Recent changes</h2><p>What has been moving lately</p></div>
+          <div class="maker-changes-head"><h2 id="changes-title">Recent changes</h2><p>What has been moving lately</p><input id="change-search" type="search" placeholder="Search changes…" style="margin-top:10px;padding:8px 10px;border:1px solid #dce3e8;border-radius:6px;font:inherit;font-size:12px;width:100%;max-width:320px"></div>
           <div class="maker-change-scroll"><ol id="maker-change-list" class="maker-change-list"></ol></div>
           <button id="maker-more-changes" class="maker-more-changes" type="button">View 10 more changes</button>
         </section>
@@ -56,14 +56,23 @@
       document.getElementById('maker-linkedin').href=data.linkedin;
       var changeList=document.getElementById('maker-change-list');
       var moreButton=document.getElementById('maker-more-changes');
+      var searchInput=document.getElementById('change-search');
       var visibleChanges=10;
+      var filtered=data.changes;
+      function applyFilter(){
+        var q=(searchInput.value||'').toLowerCase();
+        filtered=q?data.changes.filter(function(c){return (c.title+' '+c.description).toLowerCase().indexOf(q)>=0;}):data.changes;
+        visibleChanges=10;
+        renderChanges();
+      }
       function renderChanges(){
-        changeList.innerHTML=data.changes.slice(0,visibleChanges).map(function(change){return '<li class="maker-change"><div class="maker-change-meta"><span class="maker-change-version">'+change.version+'</span><span class="maker-change-date">'+change.date+'</span></div><h3>'+change.title+'</h3><p>'+change.description+'</p></li>';}).join('');
-        var remaining=data.changes.length-visibleChanges;
+        changeList.innerHTML=filtered.slice(0,visibleChanges).map(function(change){return '<li class="maker-change"><div class="maker-change-meta"><span class="maker-change-version">'+change.version+'</span><span class="maker-change-date">'+change.date+'</span></div><h3>'+change.title+'</h3><p>'+change.description+'</p></li>';}).join('');
+        var remaining=filtered.length-visibleChanges;
         moreButton.hidden=remaining<=0;
         if(remaining>0)moreButton.textContent='View '+Math.min(10,remaining)+' more changes';
       }
       moreButton.addEventListener('click',function(){visibleChanges+=10;renderChanges();});
+      searchInput.addEventListener('input',applyFilter);
       renderChanges();
     }());
   </script>
