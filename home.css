@@ -6,6 +6,7 @@
 [data-theme="dark"] body{background:#0f1419;color:var(--ink)}
 [data-theme="dark"] .home-header{background:#161c24;border-color:var(--line)}
 [data-theme="dark"] .tool-card{background:#161c24;border-color:#2a3440;color:var(--ink)}
+[data-theme="dark"] .tool-card:hover{transform:translateY(-3px);border-color:var(--red);background:#1b2230;box-shadow:0 14px 32px rgba(0,0,0,.45)}
 [data-theme="dark"] .tool-card p{color:var(--muted)}
 [data-theme="dark"] .home-footer{background:#161c24;border-color:var(--line);color:var(--muted)}
 [data-theme="dark"] .home-footer .social-links a{background:#1f2730;color:var(--muted)}
